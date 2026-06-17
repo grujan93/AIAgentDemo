@@ -1,0 +1,6 @@
+@SemanticKernelGeminiDemo_HostAddress = http://localhost:5126
+
+GET {{SemanticKernelGeminiDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
