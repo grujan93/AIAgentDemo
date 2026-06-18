@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.SemanticKernel;
+using SemanticKernelGeminiDemo.Chat;
 using SemanticKernelGeminiDemo.Data;
 using SemanticKernelGeminiDemo.Endpoints;
 using SemanticKernelGeminiDemo.Plugins;
@@ -47,6 +48,7 @@ builder.Services.AddDbContext<TodoDbContext>(options =>
 });
 
 builder.Services.AddScoped<ITodoService, TodoService>();
+builder.Services.AddSingleton<ChatHistoryStore>();
 
 var app = builder.Build();
 
